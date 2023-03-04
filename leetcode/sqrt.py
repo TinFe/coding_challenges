@@ -17,14 +17,13 @@ def mysqrt(x):
         if x == 1:
             return 1
         if x > 1:
-            iterations = 0
             while True:
                 if round(abs(middle * middle - x),6) < 1:
-                    return iterations, int(middle)
+                    return int(middle)
                 elif middle * middle > x:
                     top = middle
                     middle = (bottom + top) / 2
                 elif middle * middle < x:
                     bottom = middle
                     middle = (bottom + top) / 2
-                iterations +=1
+
